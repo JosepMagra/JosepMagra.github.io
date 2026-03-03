@@ -1,0 +1,467 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	Personalizado para Josep Magraner - Data Scientist
+-->
+<html lang="es">
+<head>
+	<title>Josep Magraner | Data Scientist</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="description" content="Data Scientist interesado en machine learning y business intelligence. Python | SQL | LightGBM | Power BI. Valencia, España." />
+	<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="manifest" href="images/site.webmanifest">
+	<meta name="keywords" content="Data Scientist, Machine Learning, Time Series Forecasting, Python, SQL, LightGBM, TensorFlow, Valencia" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	<style>
+		:root {
+			--color-bg-dark: #0f172a;
+			--color-accent-cyan: #22d3ee;
+			--color-slate-text: #546275;
+			--color-light-gray: #f4f4f4;
+		}
+		
+		#intro h1 {
+			font-size: 3.2em;
+			margin-bottom: 0.6em;
+			color: #ffffff;
+		}
+		
+		#intro .cta-subtitle {
+			font-size: 1.4em;
+			line-height: 1.6;
+			color: var(--color-light-gray);
+			margin-bottom: 2em;
+			max-width: 800px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		
+		#intro .cta-tagline {
+			font-size: 1em;
+			opacity: 0.8;
+			color: var(--color-slate-text);
+			margin-top: 1em;
+		}
+		
+		.features section .icon.major {
+			background: linear-gradient(135deg, var(--color-accent-cyan), #0891b2);
+			color: var(--color-bg-dark);
+			width: 3em;
+			height: 3em;
+			line-height: 3em;
+			margin-bottom: 1.5em;
+			box-shadow: 0 4px 12px rgba(34, 211, 238, 0.3);
+		}
+		
+		.features section h3 {
+			color: var(--color-accent-cyan);
+			margin-bottom: 0.8em;
+		}
+		
+		.project-card {
+			background: rgba(34, 211, 238, 0.05);
+			border: 1px solid rgba(34, 211, 238, 0.2);
+			border-radius: 12px;
+			padding: 2em;
+			margin-bottom: 2em;
+			transition: all 0.3s ease;
+			position: relative;
+			overflow: hidden;
+		}
+		
+		.project-card::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 4px;
+			height: 100%;
+			background: linear-gradient(to bottom, var(--color-accent-cyan), #0891b2);
+		}
+		
+		.project-card:hover {
+			border-color: var(--color-accent-cyan);
+			box-shadow: 0 8px 24px rgba(34, 211, 238, 0.15);
+			transform: translateY(-4px);
+		}
+		
+		.project-card h3 {
+			margin-bottom: 0.6em;
+			color: #ffffff;
+			font-size: 1.5em;
+		}
+		
+		.project-card .project-meta {
+			font-size: 0.85em;
+			color: var(--color-slate-text);
+			margin-bottom: 1em;
+		}
+		
+		.project-card p {
+			font-size: 1em;
+			line-height: 1.7;
+			color: rgba(255, 255, 255, 0.75);
+			margin-bottom: 1.2em;
+		}
+		
+		.badge {
+			display: inline-block;
+			background: rgba(34, 211, 238, 0.15);
+			border: 1px solid rgba(34, 211, 238, 0.4);
+			border-radius: 20px;
+			padding: 0.35em 1em;
+			font-size: 0.8em;
+			margin: 0.25em;
+			letter-spacing: 0.05em;
+			color: var(--color-accent-cyan);
+			font-weight: 500;
+		}
+		
+		.skill-bars-section {
+			display: none;
+		}
+		
+		#contacto form input,
+		#contacto form textarea {
+			background: rgba(34, 211, 238, 0.08);
+			border: 1px solid rgba(34, 211, 238, 0.25);
+			transition: all 0.2s ease;
+		}
+		
+		#contacto form input:focus,
+		#contacto form textarea:focus {
+			border-color: var(--color-accent-cyan);
+			box-shadow: 0 0 0 2px rgba(34, 211, 238, 0.2);
+		}
+		
+		.button.primary {
+			background: linear-gradient(135deg, var(--color-accent-cyan), #0891b2);
+			color: var(--color-bg-dark);
+			font-weight: 600;
+			border: none;
+			box-shadow: 0 4px 12px rgba(34, 211, 238, 0.3);
+		}
+		
+		.button.primary:hover {
+			box-shadow: 0 6px 16px rgba(34, 211, 238, 0.4);
+			transform: translateY(-2px);
+		}
+		
+		#sidebar {
+			background: var(--color-bg-dark);
+		}
+		
+		#sidebar nav a:hover,
+		#sidebar nav a.active {
+			color: var(--color-accent-cyan);
+		}
+		
+		#sidebar nav a::after {
+			background: var(--color-accent-cyan);
+		}
+		
+		.icons li a {
+			color: rgba(255, 255, 255, 0.6);
+			transition: color 0.2s ease;
+		}
+		
+		.icons li a:hover {
+			color: var(--color-accent-cyan);
+		}
+		
+		.timeline-item {
+			border-left: 2px solid rgba(34, 211, 238, 0.3);
+			padding-left: 1.5em;
+			margin-bottom: 2em;
+			position: relative;
+		}
+		
+		.timeline-item::before {
+			content: '';
+			width: 12px;
+			height: 12px;
+			background: var(--color-accent-cyan);
+			border-radius: 50%;
+			position: absolute;
+			left: -7px;
+			top: 5px;
+			box-shadow: 0 0 0 3px var(--color-bg-dark), 0 0 0 5px rgba(34, 211, 238, 0.3);
+		}
+		
+		.timeline-date {
+			font-size: 0.8em;
+			color: var(--color-accent-cyan);
+			text-transform: uppercase;
+			letter-spacing: 0.1em;
+			font-weight: 600;
+			margin-bottom: 0.5em;
+			display: block;
+		}
+		
+		@media screen and (max-width: 736px) {
+			#intro h1 {
+				font-size: 2.2em;
+			}
+			
+			#intro .cta-subtitle {
+				font-size: 1.1em;
+			}
+			
+			.project-card {
+				padding: 1.5em;
+			}
+		}
+	</style>
+</head>
+<body class="is-preload">
+
+	<!-- Sidebar -->
+	<section id="sidebar">
+		<div class="inner">
+			<nav>
+				<ul>
+					<li><a href="#intro">Inicio</a></li>
+					<li><a href="#habilidades">Skills</a></li>
+					<li><a href="#proyectos">Proyectos</a></li>
+					<li><a href="#sobre-mi">Sobre mí</a></li>
+					<li><a href="#contacto">Contacto</a></li>
+				</ul>
+			</nav>
+		</div>
+	</section>
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Intro / Hero -->
+		<section id="intro" class="wrapper style1 fullscreen fade-up">
+			<div class="inner">
+				<h1>Josep Magraner</h1>
+				<p class="cta-subtitle">
+					<strong>Data Scientist</strong> interesado en machine learning y business intelligence.<br />
+					Transformo datos complejos en sistemas predictivos y decisiones de negocio comprensibles y rentables.
+				</p>
+				<p class="cta-tagline">
+					Python · SQL · Power BI · Machine Learning
+				</p>
+				<ul class="actions">
+					<li><a href="#proyectos" class="button primary scrolly">Ver Proyectos</a></li>
+					<li><a href="#contacto" class="button scrolly">Hablemos</a></li>
+					<li><a href="assets/cv/CV.pdf" class="button" target="_blank">Ver CV</a></li>
+				</ul>
+			</div>
+		</section>
+
+		<!-- Habilidades (Skills destacadas) -->
+		<section id="habilidades" class="wrapper style2 fade-up">
+			<div class="inner">
+				<h2>Skills Principales</h2>
+				<p>Mi stack técnico cubre el ciclo completo del dato: desde ingesta y limpieza hasta modelado predictivo y comunicación de insights.</p>
+				<div class="features">
+					<section>
+						<span class="icon solid major fa-code"></span>
+						<h3>Python & R</h3>
+						<p>Pandas, NumPy, Scikit-learn. Automatización de pipelines de datos y análisis reproducible.</p>
+					</section>
+					<section>
+						<span class="icon solid major fa-brain"></span>
+						<h3>Machine Learning</h3>
+						<p>Modelos supervisados y no supervisados. Validación cruzada, optimización de hiperparámetros, interpretabilidad con SHAP.</p>
+					</section>
+					<section>
+					    <span class="icon solid major fa-laptop-code"></span>
+					    <h3>Aplicaciones user-friendly</h3>
+					    <p>Dashboards funcionales que permiten a cualquier usuario interactuar con mis sistemas sin tocar código.</p>
+					</section>
+
+					<section>
+						<span class="icon solid major fa-database"></span>
+						<h3>SQL & Bases de Datos</h3>
+						<p>Consultas avanzadas, joins, agregaciones. SQL Server (T-SQL), MySQL, PostgreSQL. Diseño de esquemas y pipelines ETL.</p>
+					</section>
+					<section>
+						<span class="icon solid major fa-chart-bar"></span>
+						<h3>Visualización de Datos</h3>
+						<p>Dashboards interactivos con Plotly y Power BI. Comunicación visual clara para audiencias técnicas y ejecutivas.</p>
+					</section>
+					<section>
+						<span class="icon brands major fa-git-alt"></span>
+						<h3>Git & Flujos de Trabajo</h3>
+						<p>Control de versiones con Git/GitHub. Jupyter Notebooks, VS Code, entornos virtuales y workflows reproducibles.</p>
+					</section>
+				</div>
+			</div>
+		</section>
+
+		<!-- Proyectos -->
+		<section id="proyectos" class="wrapper style3 fade-up">
+			<div class="inner">
+				<h2>Proyectos Destacados</h2>
+				<p>Muestro proyectos donde apliqué mis conocimientos para dar solución a problemas reales de negocio.</p>
+				
+				<div class="project-card">
+				    <h3>Sistema de Previsión Energética</h3>
+				    <p class="project-meta">2026 · Sector Industrial · Valencia</p>
+				    <p><strong>Contexto:</strong> Las previsiones de demanda y generación eléctrica se realizaban manualmente por un ejecutivo. Al escalar a nuevas plantas industriales, el proceso se volvió inviable: horas de trabajo repetitivo, sin trazabilidad y con alto riesgo de error humano.</p>
+				    <p><strong>Mi rol:</strong> Con los modelos de forecasting ya validados (Random Forest, LightGBM, ANN), diseñé e implementé toda la infraestructura de automatización: pipeline ETL robusto en Python, integración con SQL Server para persistencia y auditoría, conexión con APIs meteorológicas (Open-Meteo) y un sistema de logging y versionado que garantiza reproducibilidad y trazabilidad completa en cada ejecución.</p>
+				    <p><strong>Resultado:</strong> El proceso pasó de horas manuales a minutos automáticos, escalable a cualquier planta prácticamente sin intervención humana. Reducción del error de predicción en un 18% vs baseline y sistema activo en entorno industrial real.</p>
+				    <p><strong>Aplicación de gestión:</strong> Desarrollé una aplicación de escritorio en PyQt6 que permite a cualquier usuario interactuar con el sistema sin tocar código: explorar las tablas de la base de datos con filtros dinámicos; exportar datos a Excel o CSV; analizar los resultados de las previsiones con gráficos animados (Forecast vs Real) y métricas automáticas (MAE, MAPE, RMSE); comparar predicciones meteorológicas contra datos históricos reales, entre otras funcionalidades.</p>
+					<p>
+				        <span class="badge">Python</span>
+				        <span class="badge">Machine Learning</span>
+				        <span class="badge">SQL Server</span>
+				        <span class="badge">ETL Automation</span>
+				        <span class="badge">Open-Meteo API</span>
+				        <span class="badge">MLOps</span>
+				    </p>
+				    <ul class="actions" style="margin-top: 1em; margin-bottom: 0;">
+				        <li><a href="https://github.com/titomacu" class="button small" target="_blank">Ver en GitHub</a></li>
+				    </ul>
+				</div>
+
+				<!---
+				<ul class="actions" style="margin-top: 2em;">
+					<li><a href="https://github.com/titomacu" class="button" target="_blank">Ver Todos en GitHub</a></li>
+				</ul>-->
+			</div>
+		</section>
+
+		<!-- Sobre mí -->
+		<section id="sobre-mi" class="wrapper style2 spotlights">
+			<section>
+				<a href="#" class="image"><img src="images/JosepMagraner.png" alt="Josep Magraner" data-position="center center" /></a>
+				<div class="content">
+					<div class="inner">
+						<h2>¿Quién soy?</h2>
+						<p>Soy <strong>Josep</strong>, Data Scientist graduado en Ciencia de Datos por la UPV (Valencia), especializado en ML y forecasting de series temporales. Me apasiona construir sistemas predictivos end-to-end — desde la ingesta de datos y el feature engineering hasta el modelo en producción — con experiencia real automatizando procesos en entornos industriales.</p>
+						<p>Mi objetivo es aplicar el ML donde genere impacto medible: reducir costes operativos, automatizar decisiones repetitivas y construir modelos que la gente realmente use.</p>
+					</div>
+				</div>
+			</section>
+			<section>
+				<a href="#" class="image">
+				    <img src="images/UPV.png" alt="Formación" data-position="center center">
+				</a>
+				<div class="content">
+					<div class="inner">
+						<h2>Formación</h2>
+						<div class="timeline-item">
+							<span class="timeline-date">2022 - 2026</span>
+							<strong>Grado en Ciencia de Datos</strong><br />
+							Universitat Politècnica de València (UPV)<br />
+							<span style="font-size: 0.9em; opacity: 0.75;">Estadística · ML · Big Data · Series Temporales · Deep Learning · Optimización</span>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section>
+				<a href="#" class="image" style="background: linear-gradient(135deg, #0f172a, #0e7490); display:flex; align-items:center; justify-content:center;">
+				    <span class="icon solid fa-briefcase" style="font-size:4em; color:rgba(34,211,238,0.3);"></span>
+				</a>
+
+				<div class="content">
+					<div class="inner">
+						<h2>Experiencia</h2>
+						<div class="timeline-item">
+							<span class="timeline-date">2025 - 2026</span>
+							<strong>Data Scientist · Prácticas</strong><br />
+							Instituto de Ingeniería Energética · Valencia<br />
+							<span style="font-size: 0.85em; opacity: 0.75;">
+								• Automatización de informes para múltiples plantas de fabricación<br />
+								• Pipeline ETL en Python + SQL Server<br />
+								• Modelos de predicción de demanda y generación energética<br />
+								• Dashboards interactivos
+							</span>
+						</div>
+						<div class="timeline-item">
+							<strong>Proyectos & Formación Autónoma</strong><br>
+							<span style="font-size:0.85em; opacity:0.75;">UPV · 2022-2026</span>
+						</div>
+					</div>
+				</div>
+			</section>
+		</section>
+
+		<!-- Contacto -->
+		<section id="contacto" class="wrapper style1 fade-up">
+			<div class="inner">
+				<h2>Hablemos</h2>
+				<p>¿Tienes un proyecto interesante, una oferta de trabajo o simplemente quieres conectar? Estoy disponible para nuevas oportunidades y colaboraciones.</p>
+				<div class="split style1">
+					<section>
+						<form method="post" action="https://formspree.io/f/mdaldvwb">
+							<div class="fields">
+								<div class="field half">
+									<label for="name">Nombre</label>
+									<input type="text" name="name" id="name" placeholder="Tu nombre" required />
+								</div>
+								<div class="field half">
+									<label for="email">Email</label>
+									<input type="email" name="email" id="email" placeholder="tuemail@ejemplo.com" required />
+								</div>
+								<div class="field">
+									<label for="message">Mensaje</label>
+									<textarea name="message" id="message" rows="5" placeholder="Cuéntame en qué puedo ayudarte..." required></textarea>
+								</div>
+							</div>
+							<ul class="actions">
+								<li><a href="#" class="button submit primary">Enviar Mensaje</a></li>
+							</ul>
+						</form>
+					</section>
+					<section>
+						<ul class="contact">
+							<li>
+								<h3>📍 Ubicación</h3>
+								<span>Valencia<br />Comunidad Valenciana, España</span>
+							</li>
+							<li>
+								<h3>📧 Email</h3>
+								<a href="mailto:josepmagra@gmail.com">josepmagra@gmail.com</a>
+							</li>
+							<li>
+								<h3>💼 Disponibilidad</h3>
+								<span>Disponible para trabajar · Remoto o presencial en Valencia</span>
+							</li>
+							<li>
+								<h3>🔗 Redes</h3>
+								<ul class="icons">
+									<li><a href="https://github.com/titomacu" class="icon brands fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+									<li><a href="https://linkedin.com/in/josepmagra" class="icon brands fa-linkedin-in" target="_blank"><span class="label">LinkedIn</span></a></li>
+									<li><a href="https://kaggle.com/josepma" class="icon brands fa-kaggle" target="_blank"><span class="label">Kaggle</span></a></li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+				</div>
+			</div>
+		</section>
+
+	</div>
+
+	<!-- Footer -->
+	<footer id="footer" class="wrapper style1-alt">
+		<div class="inner">
+			<ul class="menu">
+				<li>&copy; Josep Magraner 2026. Todos los derechos reservados.</li>
+				<li>Template: <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>
+			</ul>
+		</div>
+	</footer>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+</html>
